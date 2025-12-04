@@ -3,7 +3,7 @@ namespace AdventOfCode25;
 public abstract class BaseSolution
 {
 	protected Action<string> Logger = new LogHandle().Log;
-
+	
 	public void SolveExampleOne()
 	{
 		using LogHandle logHandle = new($"Day {GetDay()}: Example 1");
