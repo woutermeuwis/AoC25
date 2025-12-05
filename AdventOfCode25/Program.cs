@@ -1,6 +1,6 @@
 ﻿var config = new
 {
-	Day = 4,
+	Day = 5,
 	Days = new[] { 1 },
 	RunMultiple = false,
 	RunExamples = true,
