@@ -89,4 +89,13 @@ public static class JaggedArrayExtensions
 		}
 		throw new("No matches found in array");
 	}
+
+	public static T[][] Transpose<T>(this T[][] arr)
+	{
+		var length = arr.Max(row => row.Length);
+		var result = new T[length][];
+		for (var y = 0; y < length; y++)
+			result[y] = arr.Select(row => row[y]).ToArray();
+		return result;
+	}
 }
