@@ -34,7 +34,7 @@ public class LogHandle : IDisposable
 		{
 			< 1000 => $"{elapsed.Milliseconds}ms",
 			< 60000 => $"{elapsed.Seconds}s {elapsed.Milliseconds}ms",
-			_ => $"{elapsed.Minutes}m {elapsed.Seconds}s)"
+			_ => $"{elapsed.Minutes}m {elapsed.Seconds}s"
 		};
 	}
 }

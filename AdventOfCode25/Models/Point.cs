@@ -12,6 +12,7 @@ public record Point(long X, long Y)
 	#region Factory
 
 	public static Point Zero => new(0, 0);
+	public static Point One => new(1,1);
 
 	#endregion
 

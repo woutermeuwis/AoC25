@@ -5,3 +5,6 @@ global using AdventOfCode25.Enums;
 global using AdventOfCode25.Extensions;
 global using AdventOfCode25.Helpers;
 global using AdventOfCode25.Models;
+
+global using System.Linq;
+global using System.Collections.Generic;
