@@ -26,17 +26,15 @@ public record Point(long X, long Y)
 	public static Point operator *(Point p, int scalar)
 		=> new(p.X * scalar, p.Y * scalar);
 
-
 	public static Point operator *(int scalar, Point p)
-		=> new(p.X * scalar, p.Y * scalar);
+		=> p * scalar;
 
 	public static Point operator *(Point p, long scalar)
 		=> new(p.X * scalar, p.Y * scalar);
 
 	public static Point operator *(long scalar, Point p)
-		=> new(p.X * scalar, p.Y * scalar);
-
-
+		=> p * scalar;
+	
 	public static Point operator /(Point p, int scalar)
 		=> new(p.X / scalar, p.Y / scalar);
 
@@ -143,7 +141,7 @@ public record Point(long X, long Y)
 		=> Math.Abs(p.X - X) <= 1 && Math.Abs(p.Y - Y) <= 1;
 
 	public decimal Size
-		=> (decimal)Math.Sqrt((int)Math.Pow(X, 2) + (int)Math.Pow(Y, 2));
+		=> (decimal)Math.Sqrt((long)Math.Pow(X, 2) + (long)Math.Pow(Y, 2));
 
 	public bool IsDivisibleBy(Point p)
 		=> X / p.X == Y / p.Y;
